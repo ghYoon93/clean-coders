@@ -19,7 +19,15 @@ public class ProceduralStopWatch {
     // 클래스 변수를 public으로 제공
     public long startTime;
     public long stopTime;
+    public long nanoStartTime;
+    public long nanoStopTime;
     public long getElapsedTime() {
         return stopTime - startTime;
     }
+
+    public long getNanoElapsedTime() {
+        return nanoStopTime - nanoStartTime;
+    }
+
+
 }

@@ -13,11 +13,11 @@ class ProceduralStopWatchTest {
     public void should_return_elapsed_milli_seconds() {
 
         ProceduralStopWatch stopWatch = new ProceduralStopWatch();
-        stopWatch.startTime = System.currentTimeMillis(); // start time millis
+        stopWatch.nanoStartTime = System.nanoTime(); // start time millis
         doSomething();
-        stopWatch.stopTime = System.currentTimeMillis(); // end time
+        stopWatch.nanoStopTime = System.nanoTime(); // end time
 
-        long elapsedTime = stopWatch.getElapsedTime();
+        long elapsedTime = stopWatch.getNanoElapsedTime();
         assertThat( elapsedTime ).isGreaterThanOrEqualTo( expectedElapsedTime );
     }
 
